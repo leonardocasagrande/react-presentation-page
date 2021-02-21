@@ -1,0 +1,35 @@
+.toolbar {
+    height: 80px;
+    width: 100%;
+    position: fixed;;
+    top: 0;
+    left: 0;
+    background-color: #212121;
+    display: flex;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 90;
+}
+
+.toolbar nav {
+    height: 100%;
+}
+
+.logoToolbar {
+    height: 100%;
+}
+
+.innerBar {
+    display: flex;
+    width: 1300px;
+    height: inherit;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 499px) {
+    .desktopOnly {
+        display: none;
+    }
+}

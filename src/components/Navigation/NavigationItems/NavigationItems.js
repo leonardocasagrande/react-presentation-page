@@ -4,24 +4,23 @@ import './NavigationItems.scss';
 import NavigationItem from './NavigationItem/NavigationItem'
 
 
-const navigationItems = () => (
-    <ul className={"navigationItems"}>
-        <NavigationItem exact link="/sobre">
-            A Fortseg
-        </NavigationItem>
-        <NavigationItem link="/servicos">
-            Serviços
-        </NavigationItem>
-        <NavigationItem link="/trabalho">
-            Trabalhe conosco
-        </NavigationItem>
-        <NavigationItem link="/contato">
-            Fale conosco
-        </NavigationItem>
-        <NavigationItem link="/orcamento">
-            Orçamento
-        </NavigationItem>
-    </ul>
-);
+const navigationItems = (props) => {
+
+    return (
+        <ul className={"navigationItems"} >
+            {
+                props.items.map(el => {
+                    return <NavigationItem
+                    key={el.link} 
+                    link={el.link}
+                    target={el.target} 
+                    exact={el.exact}>
+                        {el.text}
+                    </NavigationItem>
+                })
+            }
+        </ul >
+    );
+};
 
 export default navigationItems;

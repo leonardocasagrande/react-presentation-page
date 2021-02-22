@@ -4,18 +4,20 @@ import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems'
 import MenuButton from '../SideDrawer/MenuButton/MenuButton'
 
-const toolbar = (props) => (
-    <header className="toolbar">
-        <div className="innerBar">
-            <MenuButton clicked={props.opened} />
-            <div className="logoToolbar">
-                <Logo />
+const toolbar = (props) => {
+    return (
+        < header className="toolbar" >
+            <div className="innerBar">
+                <MenuButton clicked={props.opened} />
+                <div className="logoToolbar">
+                    <Logo />
+                </div>
+                <nav className="desktopOnly">
+                    <NavigationItems items={props.navItems} />
+                </nav>
             </div>
-            <nav className="desktopOnly">
-                <NavigationItems />
-            </nav>
-        </div>
-    </header>
-);
+        </header >
+    );
+};
 
 export default toolbar;

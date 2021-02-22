@@ -19,7 +19,7 @@ const sideDrawer = (props) => {
                     <Logo />
                 </div>
                 <nav>
-                    <NavigationItems />
+                    <NavigationItems items={props.navItems}/>
                 </nav>
             </div>
         </Aux>
